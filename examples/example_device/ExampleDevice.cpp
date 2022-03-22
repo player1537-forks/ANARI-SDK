@@ -596,6 +596,18 @@ extern "C" EXAMPLE_DEVICE_INTERFACE ANARI_DEFINE_LIBRARY_GET_OBJECT_PARAMETERS(
   // GET_OBJECT_PARAMETERS(LIGHT, Light);
   GET_OBJECT_PARAMETERS(CAMERA, Camera);
   GET_OBJECT_PARAMETERS(SPATIAL_FIELD, SpatialField);
+  if (objectType == ANARI_GROUP) {
+    return anari::example_device::Group::g_parameters;
+  }
+  if (objectType == ANARI_INSTANCE) {
+    return anari::example_device::Instance::g_parameters;
+  }
+  if (objectType == ANARI_WORLD) {
+    return anari::example_device::World::g_parameters;
+  }
+  if (objectType == ANARI_SURFACE) {
+    return anari::example_device::Surface::g_parameters;
+  }
   return nullptr;
 
 #undef GET_OBJECT_PARAMETERS

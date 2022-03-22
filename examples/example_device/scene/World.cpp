@@ -6,6 +6,13 @@
 namespace anari {
 namespace example_device {
 
+ANARIParameter World::g_parameters[] = {
+  {"group", ANARI_ARRAY1D},
+  {"surface", ANARI_ARRAY1D},
+  {"volume", ANARI_ARRAY1D},
+  {NULL, ANARI_UNKNOWN},
+};
+
 World::World()
 {
   setCommitPriority(COMMIT_PRIORITY_WORLD);

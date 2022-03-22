@@ -6,6 +6,12 @@
 namespace anari {
 namespace example_device {
 
+ANARIParameter Surface::g_parameters[] = {
+  {"geometry", ANARI_GEOMETRY},
+  {"material", ANARI_MATERIAL},
+  {NULL, ANARI_UNKNOWN},
+};
+
 Surface::Surface()
 {
   setCommitPriority(COMMIT_PRIORITY_SURFACE);

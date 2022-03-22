@@ -6,6 +6,12 @@
 namespace anari {
 namespace example_device {
 
+ANARIParameter Group::g_parameters[] = {
+  {"surface", ANARI_ARRAY1D},
+  {"volume", ANARI_ARRAY1D},
+  {NULL, ANARI_UNKNOWN},
+};
+
 Group::Group()
 {
   setCommitPriority(COMMIT_PRIORITY_GROUP);

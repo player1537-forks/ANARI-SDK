@@ -12,6 +12,8 @@ struct World : public IntersectableObject<IntersectablePtr<Instance>>
 {
   World();
 
+  static ANARIParameter g_parameters[];
+
   void commit() override;
 
   IntrusivePtr<ObjectArray> m_instanceData;

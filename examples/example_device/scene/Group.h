@@ -13,6 +13,8 @@ struct Group : public SceneObject
 {
   Group();
 
+  static ANARIParameter g_parameters[];
+
   void commit() override;
 
   PotentialHit intersect(const Ray &ray, size_t) const override;

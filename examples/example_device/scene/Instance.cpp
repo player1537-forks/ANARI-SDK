@@ -6,6 +6,12 @@
 namespace anari {
 namespace example_device {
 
+ANARIParameter Instance::g_parameters[] = {
+  {"group", ANARI_GROUP},
+  {"transform", ANARI_FLOAT32_MAT3x4},
+  {NULL, ANARI_UNKNOWN},
+};
+
 Instance::Instance()
 {
   setCommitPriority(COMMIT_PRIORITY_INSTANCE);

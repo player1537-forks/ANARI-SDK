@@ -13,6 +13,8 @@ struct Surface : public SceneObject
 {
   Surface();
 
+  static ANARIParameter g_parameters[];
+
   void commit() override;
 
   const Geometry *geometry() const;
